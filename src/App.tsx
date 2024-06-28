@@ -1,9 +1,14 @@
-import React from 'react';
+import React from "react";
 
-import PageLayout from './layouts/PageLayout/PageLayout';
+import Converter from "./blocks/Converter/Converter";
+import PageLayout from "./layouts/PageLayout/PageLayout";
 
 function App() {
-  return <PageLayout></PageLayout>;
+  return (
+    <PageLayout>
+      <Converter />
+    </PageLayout>
+  );
 }
 
 export default App;

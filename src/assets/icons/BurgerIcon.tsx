@@ -1,6 +1,6 @@
-import React, { SVGProps } from 'react';
+import React, { SVGProps } from "react";
 
-const BurgerIcon: React.FC = (props: SVGProps<SVGSVGElement>) => {
+const BurgerIcon: React.FC<SVGProps<SVGSVGElement>> = (props) => {
   return (
     <svg
       className="w-6 h-6"

@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 
-import { ChildrenProps } from '../../types';
-import Footer from '../Footer/Footer';
-import Header from '../Header/Header';
+import { ChildrenProps } from "../../types";
+import Footer from "../Footer/Footer";
+import Header from "../Header/Header";
 
-const PageLayout: React.FC = ({ children }: ChildrenProps) => {
+const PageLayout: React.FC<ChildrenProps> = ({ children }) => {
   return (
     <>
       <Header />
