@@ -1,12 +1,9 @@
 import React from 'react';
 
+import PageLayout from './layouts/PageLayout/PageLayout';
+
 function App() {
-  return (
-    <div className="App">
-      <p className="text-center text-3xl bg-blue-900">Text Converter</p>React
-      App
-    </div>
-  );
+  return <PageLayout></PageLayout>;
 }
 
 export default App;
