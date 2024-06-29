@@ -43,7 +43,7 @@ const DragAndDropInput: React.FC<DragAndDropInputProps> = ({
       </p>
       <Button
         className="bg-gray-100 hover:bg-white/75 text-gray-700"
-        title="Виберіть файл"
+        text="Виберіть файл"
       />
     </div>
   );

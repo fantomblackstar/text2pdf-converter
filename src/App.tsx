@@ -1,13 +1,16 @@
 import React from "react";
 
 import Converter from "./blocks/Converter/Converter";
+import AppProvider from "./contexts/AppProvider";
 import PageLayout from "./layouts/PageLayout/PageLayout";
 
 function App() {
   return (
-    <PageLayout>
-      <Converter />
-    </PageLayout>
+    <AppProvider>
+      <PageLayout>
+        <Converter />
+      </PageLayout>
+    </AppProvider>
   );
 }
 

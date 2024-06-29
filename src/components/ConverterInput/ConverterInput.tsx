@@ -24,7 +24,7 @@ const ConverterInput: React.FC<ConverterInputProps> = ({
   };
 
   return (
-    <div className="h-[60vh] md:h-80 xl:h-[31.25rem] w-full rounded-lg relative bg-blue-600 p-2 lg:p-4">
+    <div className="h-[60vh] md:h-80 xl:h-[31.25rem] w-full rounded-lg relative bg-blue-600 p-2 lg:p-4 mb-4 lg:mb-8">
       <textarea
         value={text}
         onChange={onTextareaChange}
