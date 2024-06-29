@@ -15,3 +15,21 @@ export const streamToBlob = async (
 
   return new Blob(chunks, { type: "application/pdf" });
 };
+
+export const blobToBase64 = async (blob: Blob): Promise<string> => {
+  const base64url: string = await new Promise((r) => {
+    const reader = new FileReader();
+    reader.onload = () => r(reader.result as string);
+    reader.readAsDataURL(blob);
+  });
+
+  return base64url;
+};
+
+export const formatISODate = (isoDate: string): string => {
+  const strArray = isoDate.split("T");
+  const date = strArray[0].split("-").reverse().join(".");
+  const time = strArray[1].substring(0, 8);
+
+  return `${date} ${time}`;
+};

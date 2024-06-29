@@ -21,7 +21,7 @@ const PDFPreview: React.FC<PDFPreviewProps> = ({ document }) => {
   }
 
   if (!document) return <></>;
-  const url = URL.createObjectURL(document);
+  // const url = URL.createObjectURL(document);
 
   return (
     <section>
@@ -29,18 +29,16 @@ const PDFPreview: React.FC<PDFPreviewProps> = ({ document }) => {
         <h2 className="text-2xl text-center lg:text-3xl text-gray-700">
           Конвертований PDF
         </h2>
-        <Button
-          className="inline-block h-max text-sm py-1 px-3"
-          title="Завантажити">
-          <a href={url} download>
+        <a href={document} download className="inline-block">
+          <Button className="h-max text-sm py-1 px-3" title="Завантажити">
             <DownloadIcon className="h-5 w-5" />
-          </a>
-        </Button>
+          </Button>
+        </a>
       </div>
       <div className="bg-blue-800 rounded-lg p-2 relative mx-auto w-full md:w-max">
         <div className="w-full h-[49.5rem] md:w-[38.25rem] overflow-auto">
           <Document
-            file={url}
+            file={document}
             onLoadSuccess={onDocumentLoadSuccess}
             options={PDF_OPTIONS}
             className={"w-max overflow-auto"}>

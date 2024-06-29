@@ -1,3 +1,3 @@
 export interface PDFPreviewProps {
-  document?: Blob;
+  document?: string;
 }

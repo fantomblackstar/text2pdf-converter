@@ -1,4 +1,4 @@
-import { streamToBlob } from "../utils";
+import { blobToBase64, streamToBlob } from "../utils";
 
 export const postData = async (
   link: string,
@@ -21,10 +21,13 @@ export const postData = async (
   return response;
 };
 
-export const generatePdf = async (text: string): Promise<Blob | undefined> => {
+export const generatePdf = async (
+  text: string,
+): Promise<string | undefined> => {
   const postLink = `${process.env.REACT_APP_PDF_API_LINK}${process.env.REACT_APP_PDF_API_KEY}`;
 
   const res = await postData(postLink, { text });
   if (!res.body) return undefined;
-  return await streamToBlob(res.body);
+  const pdfBblob = await streamToBlob(res.body);
+  return await blobToBase64(pdfBblob);
 };
