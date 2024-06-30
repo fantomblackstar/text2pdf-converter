@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/text2pdf-converter/static/css/main.81aa63a3.css",
+    "main.js": "/text2pdf-converter/static/js/main.c218bd39.js",
+    "static/media/pdf.worker.min.mjs": "/text2pdf-converter/static/media/pdf.worker.min.11a4c780b60aed25eb1a.mjs",
+    "index.html": "/text2pdf-converter/index.html",
+    "main.81aa63a3.css.map": "/text2pdf-converter/static/css/main.81aa63a3.css.map",
+    "main.c218bd39.js.map": "/text2pdf-converter/static/js/main.c218bd39.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.81aa63a3.css",
+    "static/js/main.c218bd39.js"
+  ]
+}
