@@ -6,5 +6,7 @@ export const useGeneratePDFMutation = () => {
   return useMutation({
     mutationFn: generatePdf,
     mutationKey: ["generatePdf"],
+    throwOnError: () => false,
+    onError: () => false,
   });
 };

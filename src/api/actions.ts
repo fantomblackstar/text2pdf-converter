@@ -5,6 +5,7 @@ export const postData = async (
   data: object,
 ): Promise<Response> => {
   const body = JSON.stringify(data);
+
   const response = await fetch(link, {
     method: "POST",
     headers: {
