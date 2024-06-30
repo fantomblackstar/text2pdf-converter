@@ -3,6 +3,7 @@ import React from "react";
 import { pdfjs } from "react-pdf";
 
 import { ChildrenProps } from "../types";
+import { ModalProvider } from "./ModalProvider";
 
 const queryClient = new QueryClient();
 
@@ -13,7 +14,12 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
 
 const AppProvider: React.FC<ChildrenProps> = ({ children }) => {
   return (
-    <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
+    <QueryClientProvider client={queryClient}>
+      <ModalProvider>
+        {children}
+        <div id="modal-form"></div>
+      </ModalProvider>
+    </QueryClientProvider>
   );
 };
 

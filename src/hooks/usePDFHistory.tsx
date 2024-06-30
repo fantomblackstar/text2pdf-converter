@@ -1,4 +1,4 @@
-import { useEffect,useState } from "react";
+import { useEffect, useState } from "react";
 
 import { PDFHistoryFile } from "../types";
 
@@ -26,7 +26,6 @@ const usePDFHistory = () => {
       file,
     };
     setFiles([...files, newFile]);
-    console.log("Save files to storage");
   };
 
   return { files, saveFile };

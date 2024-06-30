@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { twMerge } from "tailwind-merge";
 
 import { useGeneratePDFMutation } from "../../api/queries";
+import DownloadIcon from "../../assets/icons/DownloadIcon";
 import ConverterInput from "../../components/ConverterInput/ConverterInput";
 import PDFPreview from "../../components/PDFPreview/PDFPreview";
 import Button from "../../components/UI/Button/Button";
@@ -44,7 +46,21 @@ const Converter: React.FC = () => {
             </p>
           )}
         </div>
-        <PDFPreview document={pdfDoc} />
+        <div
+          className={twMerge(
+            "flex justify-center items-end gap-2 mb-5",
+            !pdfDoc && "hidden",
+          )}>
+          <h2 className="text-2xl text-center lg:text-3xl text-gray-700">
+            Конвертований PDF
+          </h2>
+          <a href={pdfDoc} download className="inline-block">
+            <Button className="h-max text-sm py-1 px-3" title="Завантажити">
+              <DownloadIcon className="h-5 w-5" />
+            </Button>
+          </a>
+        </div>
+        <PDFPreview document={pdfDoc} className="mx-auto" />
       </Container>
     </section>
   );
